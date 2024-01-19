@@ -829,42 +829,14 @@
                                 </svg>
                             </div>
                         </a>
-                       
-   <style>
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-</style>
-
-<div class="dropdown">
-    <a href="#" class="nav__link-wrap link-underline w-inline-block">
-        <div class="new-nav-link">Services</div>
-    </a>
-    <div class="dropdown-content">
-        <a href="#">Service 1</a>
-        <a href="#">Service 2</a>
-        <a href="#">Service 3</a>
-    </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-
-
+                         <a href="#conversion-wizard" target="_blank" class="nav__link-wrap link-underline w-inline-block">
+                            <div class="new-nav-link">Services</div>
+                            <div class="w-embed">
+                                <svg width="88" height="4" viewBox="0 0 88 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-dashoffset="86.02449035644531" stroke-dasharray="86.02449035644531" d="M1 3C29.7355 2.71862 58.3903 1.76039 87 1" stroke="#8247FF" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </a>
                          <a href="#conversion-wizard" target="_blank" class="nav__link-wrap link-underline w-inline-block">
                             <div class="new-nav-link">Contact</div>
                             <div class="w-embed">
@@ -920,63 +892,193 @@
     <div data-w-id="a93d2fc7-4849-f6ba-8035-5048abb60045" class="nav__white-bg"></div>
 </nav>
 <style>
-  section{
-    padding-top: 200px;
-  }
-  </style>
- <section id="conversion-wizard" class="section__wizard">
-        <div class="padding-section__large">
-            <div class="container-large">
-                <div class="wizard__parent">
-                    <div data-w-id="fd54844a-0e64-f3fb-ab0f-9391a5c4f6e2" style="opacity:0" class="wizard__child left">
-                        <div class="viedeo-wrap">
-                            <div class="wizard-video_wrapper">
-                                <div class="vieo__embed w-embed w-iframe w-script">
-                                    <div style="padding:202.16% 0 0 0;position:relative;">
-                                        <iframe src="https://player.vimeo.com/video/876426351?background=1&loop=1" frameborder="0" style="position:absolute;top:0;left:0;width:100%;height:100%;" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
-                                    </div>
-                                    <script></script>
-                                    <style>
-                                        iframe {
-                                            border-width: 0px;
-                                            border-style: inset;
-                                            border-color: initial;
-                                            border-image: initial;
-                                        }
-                                    </style>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-w-id="12c5c83d-826e-baf3-3501-1ede09254654" style="opacity:0" class="wizard__child right">
-                        <div class="contents__wrapper bottom_m">
-                            <div class="content-headings__wrapper">
-                                <h2 class="h2 js-split-hero">
-                                    <span class="js-three-lines">Lorem Ipsum</span>
-                                    <br/>
-                                </h2>
-                            </div>
-                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                        </div>
-                        <div class="main-button-wrapper">
-                            <div data-w-id="5b14fae6-9f41-cee0-4d9b-6b7a5d04982b" class="m-button__wrap">
-                                <div class="m-b-text">
-                                    <div data-w-id="5b14fae6-9f41-cee0-4d9b-6b7a5d04982d" class="m-b-text-up">Get in touch</div>
-                                    <div data-w-id="5b14fae6-9f41-cee0-4d9b-6b7a5d04982f" class="m-b-text-static">Get in touch</div>
-                                </div>
-                                <div class="m-b-arrow">
-                                    <img src="https://assets-global.website-files.com/63ce8fdfb773bb355dff79ca/63ceb1c0291756f54529666a_arrow.svg" loading="lazy" data-w-id="5b14fae6-9f41-cee0-4d9b-6b7a5d049832" alt="" class="b-arrow-absolute"/>
-                                    <img src="https://assets-global.website-files.com/63ce8fdfb773bb355dff79ca/63ceb1c0291756f54529666a_arrow.svg" loading="lazy" data-w-id="5b14fae6-9f41-cee0-4d9b-6b7a5d049833" alt="" class="b-arrow"/>
-                                </div>
-                                <div class="m-b-bg-dark"></div>
-                            </div>
-                        </div>
-                    </div>
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        section#team-section {
+            padding-top: 100px;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h2.text-center {
+            color: #333333;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .column {
+            width: 100%; /* Full width on small screens */
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .container-card {
+            padding: 20px;
+        }
+
+        h3 {
+            color: #333333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p.title {
+            color: #777777;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #007bff;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Media Query for smaller screens */
+        @media only screen and (min-width: 768px) {
+            .column {
+                width: calc(33.33% - 16px);
+                padding: 0 8px;
+            }
+        }
+         .services-container {
+            padding: 50px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .services h2 {
+            color: #007bff;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .services p {
+            color: #495057;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .bottom-content {
+            margin-top: 30px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .bottom-content h3 {
+            color: #007bff;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .bottom-content p {
+            color: #495057;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+<section id="team-section" class="section bg-light" style="padding-top: 100px;text-align: justify;">
+    <div class="container py-5">
+        <div class="container">
+    <div class="services-container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="services">
+                    <h2>What is Lorem Ipsum?
+</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+</p>
+                </div>
+            </div>
+            <div class="col-md-6 mt-5" style="padding-top:50px;">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/800x600" alt="Services Image">
                 </div>
             </div>
         </div>
-    </section>
-     <footer class="section__footer">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="bottom-content">
+                    <h3>What is Lorem Ipsum?
+</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+</section>
+ <footer class="section__footer">
         <div class="padding-section__large footer">
             <div class="container-medium">
                 <div class="footer__parent">
@@ -986,7 +1088,7 @@
                                 <a href="/" data-w-id="d1010549-0f55-6faf-0d19-dbd09b53a641" aria-current="page" class="nav__symbol-wrapper w-nav-brand w--current">
                                    
                                 </a>
-                                <a href="/" aria-current="page" class="nav__logotype-wrapper w-nav-brand w--current">
+                                <a href="index.html" aria-current="page" class="nav__logotype-wrapper w-nav-brand w--current">
                                     <img loading="eager" src="public/web/logo.png" alt="moneymasterz" style="height:70%;width:70%;" class="img-full"/>
                                 </a>
                             </div>
@@ -1136,8 +1238,8 @@
                         <div class="footer__logo-wrap">
                             <div class="contiant__logo-wrap">
                                 
-                                <a href="/" aria-current="page" class="nav__logotype-wrapper w-nav-brand w--current">
-                                    <img loading="eager" src="<?php echo base_url()?>public/web/logo.png"" alt="moneymasterz" class="img-full"/>
+                                <a href="index.html" aria-current="page" class="nav__logotype-wrapper w-nav-brand w--current">
+                                    <img loading="eager" src="public/web/logo.png" alt="moneymasterz" class="img-full"/>
                                 </a>
                             </div>
                             <div class="footer__copiright">
@@ -1770,4 +1872,4 @@
 </body>
 </html>
  
-   
+
